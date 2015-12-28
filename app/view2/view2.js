@@ -21,5 +21,11 @@ define([
 			// Furthermore we need to pass on the $scope as it's unique to this controller
 			$injector.invoke(ctrl2, this, {'$scope': $scope});
 		});
-	}]);
+	}])
+		.directive("hello", function(){
+			return {
+				restrict: 'EA',
+				template: "<div>success！</div>"
+			}
+		});;
 });
